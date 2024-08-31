@@ -203,10 +203,6 @@ document.addEventListener('DOMContentLoaded', () => {
         instructions.style.marginBottom = '0px'
         instructions.style.fontWeight = 'normal';
         modal.appendChild(instructions);
-
-        console.log('test')
-
-
     });
 });
 

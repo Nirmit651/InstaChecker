@@ -17,17 +17,25 @@
     </div>
 
     <div class="output-container">
-      <div>
+      <div class="output-box">
         <h3>You Don't Follow Back</h3>
         <div class='output-list-container' id="fans-list">
-          <ul class="output-list">
-          </ul>
         </div>
       </div>
-      <div>
+      <div class="output-box">
         <h3>Don't Follow Back</h3>
-        <div class='output-list-container' id="unfollowers-list"></div>
+        <div class='output-list-container' id="unfollowers-list">
+        </div>
       </div>
     </div>
+
+    <div class="footer">
+      Copyright &copy; <span id="year"></span> <a href="https://github.com/Nirmit651"> Nirmit651</a>
+    </div>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
 </body>
 </html>

@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   mode: 'production',
@@ -9,12 +10,23 @@ module.exports = {
       title: 'InstaChecker',
       template: './src/index.html',
     }),
+    new MiniCssExtractPlugin({
+      filename: '[name].css', // Output filename for the CSS
+    }),
   ],
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
     publicPath: '/InstaChecker/', 
+  },
+  devServer: {
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
+    compress: true,
+    port: 9000,
+    historyApiFallback: true, // This handles routing errors
   },
   module: {
     rules: [
