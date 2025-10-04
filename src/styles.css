@@ -39,6 +39,49 @@ body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+/* Dark button + darker on hover */
+:root{
+  --btn-bg: #2b2f3a;         /* base dark */
+  --btn-bg-hover: #222633;   /* darker on hover */
+  --btn-bg-active: #191d27;  /* darkest on press */
+  --btn-text: #ffffff;
+}
+
+.instructions{
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+
+  /* nice feel */
+  transition: background-color .18s ease, box-shadow .18s ease, transform .06s ease;
+  box-shadow: 0 1px 0 rgba(255,255,255,.05) inset, 0 4px 10px rgba(0,0,0,.15);
+}
+
+.instructions:hover{
+  background: var(--btn-bg-hover);
+}
+
+.instructions:active{
+  background: var(--btn-bg-active);
+  transform: translateY(1px);
+}
+
+.instructions:focus-visible{
+  outline: 2px solid #8ab4f8;
+  outline-offset: 2px;
+}
+
+/* optional disabled state */
+.instructions[disabled]{
+  opacity: .6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+
 .instructions:hover {
     background-color: #357abd;
 }

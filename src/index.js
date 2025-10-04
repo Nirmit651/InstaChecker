@@ -128,11 +128,11 @@ document.addEventListener('DOMContentLoaded', () => {
         let usernames = [];
 
         for(let i = 0; i < followingData.relationships_following.length; i++) {
-            const user = followingData.relationships_following[i].string_list_data[0].value;
+            const user = followingData.relationships_following[i].title;
             if (user) {
                 usernames.push(user);
             } else {
-                console.log(`Invalid or missing data at index ${i}:`, relationshipsData[i]);
+                console.log(`Invalid or missing data at index ${i}:`);
             }
         }
         console.log('Extracted usernames:', usernames);
@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
         modal.appendChild(modalTitle);
 
         const instructions = document.createElement('h4');
-        instructions.textContent = 'On a computer, log into you IG account on instagram.com. Click More in the bottom left > Settings > Accounts Center > Your Information and Permissions > Download Your Information > Download or Transfer Information > Some of Your Information > Scroll down to connectios and click followers and following > click next > Download to Device > Make Data Range All Time and change Format to JSON > Wait for the file to be generated (you\'ll get an email when its generated) > Download the file and then drag and drop into the box.';
+        instructions.textContent = 'On a computer, log into you IG account on instagram.com. Click More in the bottom left > Settings > Accounts Center > Your Information and Permissions > Download Your Information > Download or Transfer Information > Some of Your Information > Make sure only followers and following is selected > click next > Download to Device > Make Data Range is All Time and change Format to JSON > Wait for the file to be generated (you\'ll get an email when its generated) > Download the file and then drag and drop into the box. Note that names of deleted account and changed usernames show up as not following.';;
         instructions.style.marginTop = '10px'
         instructions.style.marginBottom = '0px'
         instructions.style.fontWeight = 'normal';

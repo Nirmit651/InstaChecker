@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "start": "webpack serve --open",
+    "dev": "webpack serve --open --port 1573",
     "push": "git subtree push --prefix dist origin gh-pages"
   },
   "keywords": [],
@@ -18,7 +18,7 @@
     "html-webpack-plugin": "^5.6.0",
     "mini-css-extract-plugin": "^2.9.1",
     "style-loader": "^4.0.0",
-    "webpack": "^5.94.0",
+    "webpack": "^5.102.0",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.0.4",
     "xml-loader": "^1.2.1"
