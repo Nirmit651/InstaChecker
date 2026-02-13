@@ -6,7 +6,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "dev": "webpack serve --open --port 1573",
-    "push": "git subtree push --prefix dist origin gh-pages"
+    "push": "git subtree push --prefix dist origin gh-pages",
+    "postbuild": "rimraf dist/main.bundle.js.LICENSE.txt",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +17,7 @@
   "devDependencies": {
     "css-loader": "^7.1.2",
     "csv-loader": "^3.0.5",
+    "gh-pages": "^6.3.0",
     "html-webpack-plugin": "^5.6.0",
     "mini-css-extract-plugin": "^2.9.1",
     "style-loader": "^4.0.0",

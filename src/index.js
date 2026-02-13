@@ -140,12 +140,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function getFans(followers, following) {
-        return followers.filter((user) => !following.includes(user));
+        const followingSet = new Set(following);
+        return followers.filter(user => !followingSet.has(user));
     }
 
     function getDoesntFollowBack(followers, following) {
-        return following.filter((user) => !followers.includes(user));
+        const followersSet = new Set(followers);
+        return following.filter(user => !followersSet.has(user));
     }
+
 
     function renderNames(uniqueFollowers, uniqueFollowing) {
         //for fans
